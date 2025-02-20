@@ -16,16 +16,19 @@ body{
 h1{
     font-size: 18px;
     color:#77acf0;
+    line-height: 1.5;
 }
 p.today{
-    margin-top: 30px;
+    margin-top: 100px;
+    color: #aaa;
 }
 p span#todayQuestion{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
+    color:#000;
 }
 h2#title{
-    width: 70%;
+    width: 80%;
     /* height: 100px; */
     padding:20px;
     margin: 0 auto;
@@ -33,7 +36,10 @@ h2#title{
     justify-content: center;
     align-items: center;
     border: 1px solid #000;
-    font-size: 30px;
+    font-size: 22px;
+    line-height: 1.75;
+    word-break: keep-all;
+
     position: absolute;
     left:50%;
     top:50%;
