@@ -33,6 +33,7 @@ h2#title{
     padding:20px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px solid #000;
@@ -44,6 +45,15 @@ h2#title{
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
+}
+span#questionNumber{
+    display: block;
+    font-size: 26px;
+    font-weight: bold;
+}
+span#questionTitle{
+    display: block;
+    font-size: 18gpx;
 }
 button#randomBtn{
     width: 150px;

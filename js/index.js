@@ -1,10 +1,12 @@
 import {data} from './data.js'; // 실제 문제 배열
 
-const title = document.getElementById("title");
+const questionTitle = document.getElementById("questionTitle");
+const questionNum = document.getElementById("questionNumber");
 const randomBtn = document.getElementById("randomBtn");
 
 let num = Number();
 let count = Number(0); // 푼 문제 기록
+let question_num = "";
 let question = "";
 
 function randomNumber(){
@@ -12,9 +14,10 @@ function randomNumber(){
 }
 
 function selectQuestion(){
+    question_num = data[num].num
     question = data[num].content
-    
-    title.innerText = question;
+    questionNum.textContent = question_num;
+    questionTitle.textContent = question;
 }
 
 
