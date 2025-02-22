@@ -16,7 +16,7 @@ const questionNum = document.getElementById("questionNumber");
 const randomBtn = document.getElementById("randomBtn");
 
 let num = Number();
-let count = Number(1); // 푼 문제 갯수 기록
+let count = Number(0); // 푼 문제 갯수 기록
 let question_num = "";
 let question = "";
 
@@ -36,6 +36,9 @@ selectQuestion(); // 문제 선택
 
 // 다음버튼 클릭시 랜덤으로 새로운 문제보기
 randomBtn.addEventListener("click", function () {
+  toggleButton.querySelector(".fa-solid").classList.remove("fa-play");
+  toggleButton.querySelector(".fa-solid").classList.add("fa-pause");
+  timerActive = false;
   // 랜덤문제 함수
   randomNumber();
   selectQuestion();
