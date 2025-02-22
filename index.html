@@ -3,20 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>지우 기능 문제집</title>
-    <link rel="stylesheet" href="./css/index.css" />
+    <title>철도차량 운전면허 기능 문제집</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- fontAwesome icon -->
+    <link rel="stylesheet" href="./css/import.css" />
   </head>
   <body>
     <div class="wrap">
-      <h1>제2종 철도차량운전면허<br />표준 기능교재</h1>
-      <p class="today">현재 도전한 문제 <span id="todayQuestion">0</span>개</p>
-
-      <!-- 문제 -->
-      <h2 id="title">
-        <span id="questionNumber"></span>
-        <span id="questionTitle"></span>
-      </h2>
-      <button id="randomBtn">다음 문제</button>
+      <header id="header">
+        <h1>제2종 철도차량 <br />운전면허 표준 기능교재</h1>
+      </header>
+      <main id="main">
+        <div class="thumnail">
+          <div class="startBtn">
+            <h2 class="btnText">READY?</h2>
+            <div class="btnTwo">
+              <p class="btnText2">GO!</p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="timerWrap">
+            <div id="timer"></div>
+            <button id="toggleBtn">
+              <i class="fa-solid fa-pause"></i>
+            </button>
+          </div>
+          <p class="today">연습한 문제 <span id="todayQuestion">1</span>개</p>
+          <!-- 문제 -->
+          <h2 id="title">
+            <span id="questionNumber"></span>
+            <span id="questionTitle"></span>
+          </h2>
+        </div>
+        <button id="randomBtn">다음 문제</button>
+      </main>
     </div>
 
     <!-- script -->

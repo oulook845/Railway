@@ -3,71 +3,187 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-    overflow: hidden;
-}
-.wrap{
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    position: relative;
-    padding: 50px 0;
-}
-h1{
-    font-size: 18px;
-    color:#77acf0;
-    line-height: 1.5;
-}
-p.today{
-    margin-top: 100px;
-    color: #aaa;
-}
-p span#todayQuestion{
-    font-size: 30px;
-    font-weight: bold;
-    color:#000;
-}
-h2#title{
-    width: 80%;
-    /* height: 100px; */
-    padding:20px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #000;
-    font-size: 22px;
-    line-height: 1.75;
-    word-break: keep-all;
 
-    position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%, -50%);
+body {
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
 }
-span#questionNumber{
-    display: block;
-    font-size: 26px;
-    font-weight: bold;
+
+.wrap {
+  max-width: 540px;
+  width: 100vw;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 90px;
+  background: #fff;
+  position: relative;
+  /* #header ***************************/
+  /* #main ***************************/
 }
-span#questionTitle{
-    display: block;
-    font-size: 18gpx;
+.wrap #header {
+  width: 100%;
+  height: 90px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99999;
 }
-button#randomBtn{
-    width: 150px;
-    padding:10px 0;
-    color:#fff;
-    background: #a1a1a1;
-    border: none;
-    border-radius: 10px;
-    position: absolute;
-    left:50%;
-    bottom:100px;
-    margin-left:-75px;
+.wrap #header h1 {
+  font-size: 14px;
+  color: #c9c9c9;
+  line-height: 1.5;
 }
-button#randomBtn:hover{
-    background: #77acf0;
-    cursor: pointer;
+.wrap #main {
+  height: 100%;
+  /* .thumnail ***************************/
+  /* .container ***************************/
+}
+.wrap #main .thumnail {
+  width: 100%;
+  height: 100%;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap #main .thumnail .startBtn {
+  text-align: center;
+  overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+.wrap #main .thumnail .startBtn:hover .btnTwo {
+  transform: translateY(0);
+}
+.wrap #main .thumnail .startBtn:hover .btnText {
+  margin-bottom: 50px;
+}
+.wrap #main .thumnail .startBtn h2 {
+  height: 85px;
+  color: #fff;
+  padding: 10px 20px;
+  font-family: "Modak", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 60px;
+  letter-spacing: 10px;
+  transition: 0.3s;
+}
+.wrap #main .thumnail .startBtn .btnTwo {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #77acf0;
+  left: 0;
+  bottom: 0;
+  transform: translateY(101%);
+  transition: 0.3s;
+}
+.wrap #main .thumnail .startBtn .btnTwo .btnText2 {
+  color: #fff;
+}
+.wrap #main .container {
+  width: 70%;
+  height: calc(100% - 100px);
+  margin: 0 auto;
+  display: none; /* flex */
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.wrap #main .container .timerWrap #timer {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Modak", serif;
+  font-size: 70px;
+  font-weight: 400;
+  font-style: normal;
+  color: #777;
+  letter-spacing: 15px;
+}
+.wrap #main .container .timerWrap button {
+  display: block;
+  width: 80px;
+  height: 30px;
+  margin: 0 auto;
+  line-height: 1;
+  color: #777;
+  border-radius: 20px;
+  background: #eee;
+  cursor: pointer;
+}
+.wrap #main .container .timerWrap button:hover {
+  color: #fff;
+  background: #77acf0;
+}
+.wrap #main .container p.today {
+  color: #aaa;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.wrap #main .container p.today span#todayQuestion {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.wrap #main .container h2#title {
+  flex: 1;
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: auto;
+  font-size: 22px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.wrap #main .container h2#title span {
+  width: 100%;
+  display: block;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+.wrap #main .container h2#title span#questionNumber {
+  font-size: 16px;
+  color: #aaa;
+}
+.wrap #main .container h2#title span#questionTitle {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  line-height: 1.75;
+  margin-top: 15px;
+}
+.wrap #main button#randomBtn {
+  display: none;
+  width: 120px;
+  padding: 10px 0;
+  color: #fff;
+  background: #a1a1a1;
+  border: none;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  margin-left: -60px;
+}
+.wrap #main button#randomBtn:hover {
+  background: #77acf0;
+  cursor: pointer;
 }
